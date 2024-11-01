@@ -5,6 +5,7 @@ def command_list():
     print('Список доступных комманд:')
     print('1. Создать каталог на сервере;')
     print('2. Удалить каталог на сервере;')
+    print('3. Вывести содержимое каталога;')
     print('0. Выход из программы.')
 
 
@@ -21,6 +22,10 @@ def main_menu(ftp_connection: FtpServer) -> None:
         elif command == '2':
             dir_name = input('Введите имя удаляемого каталога: ')
             ftp_connection.delete_directory(dir_name)
+            command_list()
+
+        elif command == '3':
+            ftp_connection.show_directory_contents()
             command_list()
 
         elif command == '0':

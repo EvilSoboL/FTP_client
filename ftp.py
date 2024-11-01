@@ -44,6 +44,9 @@ class FtpServer:
         self.connection.rmd(directory_name)
         print(f'Каталог {directory_name} успешно удален')
 
+    def show_directory_contents(self) -> None:
+        print(self.connection.dir('.'))
+
     def close(self):
         self.connection.close()
         print('Соединение разорвано')
