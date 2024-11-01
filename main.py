@@ -9,6 +9,7 @@ def command_list():
     print('4. Сменить каталог')
     print('5. Получить файл')
     print('6. Загрузить файл ')
+    print('7. Переименовать файл')
     print('0. Выход из программы')
 
 
@@ -44,6 +45,11 @@ def main_menu(ftp_connection: FtpServer) -> None:
             filename = input('Введите имя файла, который хотите загрузить: ')
             local_filename = input('Введите имя для загружаемого файла: ')
             ftp_connection.upload_file(filename, local_filename)
+
+        elif command == '7':
+            filename = input('Введите имя файла, который хотите переименовать: ')
+            new_filename = input('Введите новое имя для файла: ')
+            ftp_connection.rename_file(filename, new_filename)
 
         elif command == '0':
             return None

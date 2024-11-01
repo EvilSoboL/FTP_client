@@ -60,6 +60,11 @@ class FtpServer:
             self.connection.storbinary(f'STOR {filename}', local_file)
         print('Файл успешно загружен')
 
+    def rename_file(self, filename: str, new_filename: str) -> None:
+        self.connection.sendcmd(f'RNFR {filename}')
+        self.connection.sendcmd(f'RNTO {new_filename}')
+        print(f'Файл успешно переименован с "{filename}" на "{new_filename}"')
+
     def close(self):
         self.connection.close()
         print('Соединение разорвано')
