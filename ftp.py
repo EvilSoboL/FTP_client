@@ -36,6 +36,10 @@ class FtpServer:
 
         return None
 
+    def make_directory(self, directory_name: str) -> None:
+        self.connection.mkd(directory_name)
+        print(f'Каталог {directory_name} успешно создан')
+
     def close(self):
         self.connection.close()
         print('Соединение разорвано')
