@@ -3,10 +3,13 @@ from ftp import FtpServer
 
 def command_list():
     print('Список доступных комманд:')
-    print('1. Создать каталог на сервере;')
-    print('2. Удалить каталог на сервере;')
-    print('3. Вывести содержимое каталога;')
-    print('0. Выход из программы.')
+    print('1. Создать каталог на сервере')
+    print('2. Удалить каталог на сервере')
+    print('3. Вывести содержимое каталога')
+    print('4. Сменить каталог')
+    print('5. Получить файл')
+    print('6. Загрузить файл ')
+    print('0. Выход из программы')
 
 
 def main_menu(ftp_connection: FtpServer) -> None:
@@ -28,8 +31,23 @@ def main_menu(ftp_connection: FtpServer) -> None:
             ftp_connection.show_directory_contents()
             command_list()
 
+        elif command == '4':
+            dir_name = input('Введите имя каталога, в который хотите переместиться: ')
+            ftp_connection.change_directory(dir_name)
+
+        elif command == '5':
+            filename = input('Введите имя файла, который хотите получить: ')
+            local_filename = input('Введите имя для сохраненного файла: ')
+            ftp_connection.download_file(filename, local_filename)
+
+        elif command == '6':
+            filename = input('Введите имя файла, который хотите загрузить: ')
+            local_filename = input('Введите имя для загружаемого файла: ')
+            ftp_connection.upload_file(filename, local_filename)
+
         elif command == '0':
             return None
+
         else:
             print('Введенная команда не существует')
             command_list()

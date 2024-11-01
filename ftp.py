@@ -47,6 +47,19 @@ class FtpServer:
     def show_directory_contents(self) -> None:
         print(self.connection.dir('.'))
 
+    def change_directory(self, directory_name: str) -> None:
+        self.connection.cwd(directory_name)
+
+    def download_file(self, filename: str, local_filename: str) -> None:
+        with open(local_filename, 'wb') as local_file:
+            self.connection.retrbinary(f'RETR {filename}', local_file.write)
+        print('Файл успешно получен')
+
+    def upload_file(self, filename: str, local_filename: str) -> None:
+        with open(local_filename, 'rb') as local_file:
+            self.connection.storbinary(f'STOR {filename}', local_file)
+        print('Файл успешно загружен')
+
     def close(self):
         self.connection.close()
         print('Соединение разорвано')

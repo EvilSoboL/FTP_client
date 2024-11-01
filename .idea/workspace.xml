@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2cd567a-b81e-4242-b6c6-4b083f0a1ac4" name="Changes" comment="Удаление каталога на сервере">
+    <list default="true" id="c2cd567a-b81e-4242-b6c6-4b083f0a1ac4" name="Changes" comment="Отображение содержимого каталога">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/ftp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -24,18 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "EvilSoboL"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EvilSoboL&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EvilSoboL/FTP_client.git",
-    "accountId": "f5418290-6a4a-477e-91ff-8bcfc428c8fb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EvilSoboL/FTP_client.git&quot;,
+    &quot;accountId&quot;: &quot;f5418290-6a4a-477e-91ff-8bcfc428c8fb&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -121,13 +121,33 @@
       <option name="project" value="LOCAL" />
       <updated>1730444894992</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Отображение содержимого каталога">
+      <option name="closed" value="true" />
+      <created>1730445972319</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730445972319</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Метод закрытия соединения" />
     <MESSAGE value="Создание каталога на сервере" />
     <MESSAGE value="Удаление каталога на сервере" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удаление каталога на сервере" />
+    <MESSAGE value="Отображение содержимого каталога" />
+    <option name="LAST_COMMIT_MESSAGE" value="Отображение содержимого каталога" />
   </component>
 </project>
