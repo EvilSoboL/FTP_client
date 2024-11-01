@@ -40,6 +40,10 @@ class FtpServer:
         self.connection.mkd(directory_name)
         print(f'Каталог {directory_name} успешно создан')
 
+    def delete_directory(self, directory_name: str) -> None:
+        self.connection.rmd(directory_name)
+        print(f'Каталог {directory_name} успешно удален')
+
     def close(self):
         self.connection.close()
         print('Соединение разорвано')
